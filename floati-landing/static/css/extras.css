@@ -924,14 +924,14 @@ body::before {
   margin-top: 8px;
 }
 
-/* ─────────────────────────── Telegram phone frame ─────────────────────────── */
+/* ─────────────────────────── Telegram chat mockup ─────────────────────────── */
 
-.ai-phone-wrap {
+.ai-mockup-wrap {
   position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 600px;
+  min-height: 500px;
 }
 
 .ai-phone-glow {
@@ -942,120 +942,39 @@ body::before {
   z-index: 0;
 }
 
-.ai-phone {
+.ai-mockup {
   position: relative;
   z-index: 1;
-  width: 300px;
-  aspect-ratio: 9 / 19.5;
-  background: #1a1614;
-  border-radius: 42px;
-  padding: 12px;
-  box-shadow:
-    0 30px 80px -30px rgba(0, 0, 0, 0.4),
-    0 0 0 1px rgba(255, 255, 255, 0.04) inset,
-    0 2px 0 0 rgba(255, 255, 255, 0.08) inset;
-}
-
-.ai-phone-notch {
-  position: absolute;
-  top: 14px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 100px;
-  height: 26px;
-  background: #000;
-  border-radius: 14px;
-  z-index: 3;
-}
-
-.ai-phone-screen {
   width: 100%;
-  height: 100%;
-  background: #f7f7f5;
-  border-radius: 30px;
+  max-width: 440px;
+  background: rgba(255, 255, 255, 0.6);
+  border: 1px solid var(--bd);
+  border-radius: 28px;
+  padding: 8px;
+  box-shadow: 
+    0 30px 80px -30px rgba(0, 0, 0, 0.15),
+    inset 0 1px 0 rgba(255, 255, 255, 0.8);
   overflow: hidden;
-  position: relative;
-  display: flex;
+  transform: rotate(1.5deg);
+  transition: transform 0.8s var(--ease);
 }
 
-html.dark .ai-phone-screen {
-  background: #1c1f24;
+html.dark .ai-mockup {
+  background: rgba(255, 255, 255, 0.04);
+  box-shadow: 
+    0 30px 80px -30px rgba(0, 0, 0, 0.4),
+    inset 0 1px 0 rgba(255, 255, 255, 0.06);
 }
 
-.ai-phone-img {
+.ai-mockup:hover {
+  transform: rotate(0deg) translateY(-8px);
+}
+
+.ai-mockup-img {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
+  height: auto;
   display: block;
-}
-
-/* Shown only if the screenshot image is missing (onerror swap) */
-.ai-phone-placeholder {
-  display: none;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 12px;
-  padding: 32px 24px;
-  text-align: center;
-  width: 100%;
-  height: 100%;
-  background:
-    repeating-linear-gradient(
-      135deg,
-      transparent 0 10px,
-      color-mix(in srgb, var(--accent) 6%, transparent) 10px 11px
-    );
-  color: var(--t2, #2d2826);
-}
-
-html.dark .ai-phone-placeholder {
-  color: #e6e3df;
-}
-
-.ai-phone-placeholder-icon {
-  width: 48px;
-  height: 48px;
-  border-radius: 14px;
-  background: var(--accent);
-  color: #fff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 4px;
-}
-
-.ai-phone-placeholder-icon svg {
-  width: 22px;
-  height: 22px;
-}
-
-.ai-phone-placeholder strong {
-  font-size: 0.92rem;
-  font-weight: 600;
-}
-
-.ai-phone-placeholder span {
-  font-size: 0.78rem;
-  line-height: 1.5;
-  color: var(--t3, #6b6b6b);
-  max-width: 220px;
-}
-
-.ai-phone-placeholder code {
-  font-family: var(--mono);
-  font-size: 0.7rem;
-  background: color-mix(in srgb, var(--t1) 6%, transparent);
-  padding: 2px 6px;
-  border-radius: 4px;
-  color: var(--accent);
-  display: inline-block;
-  margin-top: 4px;
-}
-
-.ai-phone-bottom {
-  display: none;
+  border-radius: 22px;
 }
 
 /* ─────────────────────────── Onboarding (white-glove) ─────────────────────────── */
