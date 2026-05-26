@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Heifer | Smart bookkeeping for bazaar merchants</title>
+  <title data-i18n="html.title">Heifer | Smart bookkeeping for bazaar merchants</title>
 
   <meta name="description" content="Heifer is POS-integrated, AI-assisted bookkeeping for UAE bazaar merchants. Every sale captured, VAT filed, accountant happy. Built in Arabic, Urdu, Bengali, English.">
   <meta name="theme-color" content="#0d6e5c">
@@ -74,19 +74,84 @@
           <span class="nav-logo-text">eifer</span>
         </a>
         <div class="nav-links" id="nav-links">
-          <a href="/" class="active">Home</a>
-          <a href="#features">Features</a>
-          <a href="#assistant">Telegram Bot</a>
-          <a href="#onboarding">Onboarding</a>
-          <a href="#accountants">For Accountants</a>
+          <a href="/" class="active" data-i18n="nav.home">Home</a>
+          <a href="#features" data-i18n="nav.features">Features</a>
+          <a href="#assistant" data-i18n="nav.telegram_bot">Telegram Bot</a>
+          <a href="#onboarding" data-i18n="nav.onboarding">Onboarding</a>
+          <a href="/accountants" data-i18n="nav.for_accountants">For Accountants</a>
+        </div>
+        <div class="nav-lang" id="nav-lang">
+          <button class="nav-lang-trigger" id="nav-lang-trigger" type="button"
+                  aria-haspopup="listbox" aria-expanded="false"
+                  data-i18n-attr="aria-label:nav.choose_language" aria-label="Choose language">
+            <svg class="nav-lang-globe" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <circle cx="8" cy="8" r="6.25"/>
+              <path d="M1.75 8h12.5"/>
+              <path d="M8 1.75c1.9 2 2.95 4.05 2.95 6.25S9.9 12.25 8 14.25"/>
+              <path d="M8 1.75c-1.9 2-2.95 4.05-2.95 6.25S6.1 12.25 8 14.25"/>
+            </svg>
+            <span class="nav-lang-code" id="nav-lang-code">EN</span>
+            <svg class="nav-lang-chev" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M3 4.5 6 7.5l3-3"/>
+            </svg>
+          </button>
+          <div class="nav-lang-menu" id="nav-lang-menu" role="listbox"
+               data-i18n-attr="aria-label:nav.language" aria-label="Language">
+            <div class="nav-lang-head" data-i18n="nav.language">Language</div>
+            <button class="nav-lang-item" type="button" role="option"
+                    data-lang="en" data-code="EN" data-dir="ltr" data-en="English">
+              <span class="nav-lang-item-text">
+                <span class="nav-lang-native" lang="en">English</span>
+                <span class="nav-lang-en">English</span>
+              </span>
+              <span class="nav-lang-item-code">EN</span>
+            </button>
+            <button class="nav-lang-item" type="button" role="option"
+                    data-lang="ar" data-code="AR" data-dir="rtl" data-en="Arabic">
+              <span class="nav-lang-item-text">
+                <span class="nav-lang-native" lang="ar" dir="rtl">العربية</span>
+                <span class="nav-lang-en">Arabic</span>
+              </span>
+              <span class="nav-lang-item-code">AR</span>
+            </button>
+            <button class="nav-lang-item" type="button" role="option"
+                    data-lang="ur" data-code="UR" data-dir="rtl" data-en="Urdu">
+              <span class="nav-lang-item-text">
+                <span class="nav-lang-native" lang="ur" dir="rtl">اردو</span>
+                <span class="nav-lang-en">Urdu</span>
+              </span>
+              <span class="nav-lang-item-code">UR</span>
+            </button>
+            <button class="nav-lang-item" type="button" role="option"
+                    data-lang="hi" data-code="HI" data-dir="ltr" data-en="Hindi">
+              <span class="nav-lang-item-text">
+                <span class="nav-lang-native" lang="hi">हिन्दी</span>
+                <span class="nav-lang-en">Hindi</span>
+              </span>
+              <span class="nav-lang-item-code">HI</span>
+            </button>
+            <button class="nav-lang-item" type="button" role="option"
+                    data-lang="ml" data-code="ML" data-dir="ltr" data-en="Malayalam">
+              <span class="nav-lang-item-text">
+                <span class="nav-lang-native" lang="ml">മലയാളം</span>
+                <span class="nav-lang-en">Malayalam</span>
+              </span>
+              <span class="nav-lang-item-code">ML</span>
+            </button>
+            <div class="nav-lang-foot">
+              <span class="nav-lang-foot-dot" aria-hidden="true"></span>
+              <span data-i18n="nav.more_languages">More languages on request</span>
+            </div>
+          </div>
         </div>
         <a href="#book" class="nav-cta">
-          Book a call
+          <span data-i18n="nav.book_call">Book a free call</span>
           <span class="nav-cta-icon">
             <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9 9 3M4 3h5v5"/></svg>
           </span>
         </a>
-        <button class="hamburger" id="hamburger" aria-label="Menu">
+        <button class="hamburger" id="hamburger"
+                data-i18n-attr="aria-label:nav.menu" aria-label="Menu">
           <span></span><span></span><span></span>
         </button>
       </div>
@@ -95,9 +160,9 @@
     <!-- Hero -->
     <section class="hero">
       <div class="hero-content">
-        <span class="hero-badge reveal">VAT-compliant &middot; Built for UAE bazaars</span>
-        <h1 class="hero-title reveal reveal-delay-1">Run your shop.<br>Heifer runs <span class="hero-accent">the&nbsp;books.</span></h1>
-        <p class="hero-sub reveal reveal-delay-2">
+        <span class="hero-badge reveal" data-i18n="hero.badge">VAT-compliant &middot; Built for UAE bazaars</span>
+        <h1 class="hero-title reveal reveal-delay-1" data-i18n-html="hero.title">Run your shop.<br>Heifer runs <span class="hero-accent">the&nbsp;books.</span></h1>
+        <p class="hero-sub reveal reveal-delay-2" data-i18n="hero.sub">
           From every cash sale to your final VAT filing, Heifer handles the books in the background.
           The Telegram bot lets you log expenses, snap supplier receipts, and ask questions &mdash;
           all in the chat you already use, in your language. You change nothing about how you trade.
@@ -105,30 +170,33 @@
         <div class="hero-actions reveal reveal-delay-3">
           <a href="#book" class="btn btn-primary">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7a2 2 0 0 1 1.72 2z"/></svg>
-            Book a call
+            <span data-i18n="hero.cta_book">Book a free 30-min call</span>
           </a>
-          <a href="#accountants" class="btn btn-mac">
+          <a href="/accountants" class="btn btn-mac">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16v6H4zM4 14h16v6H4z"/><circle cx="8" cy="7" r="1" fill="currentColor"/><circle cx="8" cy="17" r="1" fill="currentColor"/></svg>
-            For Accountants
+            <span data-i18n="hero.cta_accountants">For Accountants</span>
           </a>
         </div>
         <p class="hero-stats">
-          <span>Onboarded <strong style="color:var(--t1);font-weight:500">one-on-one</strong></span>
+          <span data-i18n-html="hero.stat_onboarded">Onboarded <strong style="color:var(--t1);font-weight:500">one-on-one</strong></span>
           <span class="dot"></span>
-          <span>Daily on <strong style="color:var(--t1);font-weight:500">Telegram</strong></span>
+          <span data-i18n-html="hero.stat_daily">Daily on <strong style="color:var(--t1);font-weight:500">Telegram</strong></span>
           <span class="dot"></span>
-          <span><strong style="color:var(--t1);font-weight:500">4</strong> languages</span>
+          <span data-i18n-html="hero.stat_languages"><strong style="color:var(--t1);font-weight:500">5</strong> languages</span>
           <span class="dot"></span>
-          <span><strong style="color:var(--t1);font-weight:500">FTA</strong>-compliant</span>
+          <span data-i18n-html="hero.stat_fta"><strong style="color:var(--t1);font-weight:500">FTA</strong>-compliant</span>
         </p>
       </div>
       <div class="hero-visual">
         <div class="hero-mockup">
           <div class="mockup-bar">
             <div class="mockup-dots"><span></span><span></span><span></span></div>
-            <span class="mockup-title">Heifer · Today</span>
+            <span class="mockup-title" data-i18n="hero.mockup_title">Heifer · Today</span>
           </div>
-          <img src="/static/images/dashboard-light.png" alt="Heifer merchant dashboard showing today's sales, VAT position, and cash on hand" class="mockup-img" id="hero-img" fetchpriority="high" decoding="async">
+          <img src="/static/images/dashboard-light.png"
+               alt="Heifer merchant dashboard showing today's sales, VAT position, and cash on hand"
+               data-i18n-attr="alt:hero.mockup_alt"
+               class="mockup-img" id="hero-img" fetchpriority="high" decoding="async">
         </div>
         <div class="hero-float float-1"></div>
         <div class="hero-float float-2"></div>
@@ -139,10 +207,10 @@
     <!-- Trust rail -->
     <section class="trust-rail">
       <div class="trust-row">
-        <span class="trust-item"><span class="trust-mark"><svg viewBox="0 0 8 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M1 4l2 2 4-4"/></svg></span> Onboarded by our team, not by you</span>
-        <span class="trust-item"><span class="trust-mark"><svg viewBox="0 0 8 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M1 4l2 2 4-4"/></svg></span> Arabic, Urdu, Bengali, English</span>
-        <span class="trust-item"><span class="trust-mark"><svg viewBox="0 0 8 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M1 4l2 2 4-4"/></svg></span> Free for your accountant</span>
-        <span class="trust-item"><span class="trust-mark"><svg viewBox="0 0 8 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M1 4l2 2 4-4"/></svg></span> Data hosted in-region</span>
+        <span class="trust-item"><span class="trust-mark"><svg viewBox="0 0 8 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M1 4l2 2 4-4"/></svg></span> <span data-i18n="trust.onboarded">Onboarded by our team, not by you</span></span>
+        <span class="trust-item"><span class="trust-mark"><svg viewBox="0 0 8 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M1 4l2 2 4-4"/></svg></span> <span data-i18n="trust.languages">English, Arabic, Urdu, Hindi, Malayalam</span></span>
+        <span class="trust-item"><span class="trust-mark"><svg viewBox="0 0 8 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M1 4l2 2 4-4"/></svg></span> <span data-i18n="trust.accountant">Free for your accountant</span></span>
+        <span class="trust-item"><span class="trust-mark"><svg viewBox="0 0 8 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M1 4l2 2 4-4"/></svg></span> <span data-i18n="trust.in_region">Data hosted in-region</span></span>
       </div>
     </section>
 
@@ -151,10 +219,10 @@
       <div class="section-inner">
         <header class="section-head">
           <div>
-            <span class="section-eyebrow">What's inside</span>
-            <h2 class="section-title">Built for the till.<br><em>Not for the spreadsheet.</em></h2>
+            <span class="section-eyebrow" data-i18n="features.eyebrow">What's inside</span>
+            <h2 class="section-title" data-i18n-html="features.title">Built for the till.<br><em>Not for the spreadsheet.</em></h2>
           </div>
-          <p class="section-aside">
+          <p class="section-aside" data-i18n="features.aside">
             Every existing tool assumes you already have clean digital data. Bazaar
             merchants don't. Heifer is built for cash sales, handwritten receipts,
             and suppliers that send a photo on WhatsApp.
@@ -163,37 +231,40 @@
 
         <div class="bento">
           <article class="tile t-feature-hero reveal">
-            <div class="tile-eyebrow">01 / POS Capture</div>
-            <h3>Every sale, the second&nbsp;it happens.</h3>
-            <p>Heifer runs on your Android POS &mdash; either as the till itself, or alongside it &mdash;
+            <div class="tile-eyebrow" data-i18n="features.tile1_eyebrow">01 / POS Capture</div>
+            <h3 data-i18n-html="features.tile1_title">Every sale, the second&nbsp;it happens.</h3>
+            <p data-i18n="features.tile1_desc">Heifer runs on your Android POS &mdash; either as the till itself, or alongside it &mdash;
                recording every transaction the moment your customer pays. No data entry, no end-of-day catch-up.</p>
             <div class="tile-shot">
-              <img src="/static/images/dashboard-dark.png" alt="Heifer dashboard showing today's transactions and live VAT position" loading="lazy" decoding="async">
+              <img src="/static/images/dashboard-dark.png"
+                   alt="Heifer dashboard showing today's transactions and live VAT position"
+                   data-i18n-attr="alt:features.tile1_alt"
+                   loading="lazy" decoding="async">
             </div>
           </article>
 
           <article class="tile t-tall reveal reveal-delay-1">
-            <div class="tile-eyebrow">02 / VAT Engine</div>
-            <h3>FTA spec.<br>Every&nbsp;invoice.</h3>
-            <p>Every invoice is formatted, UUID-stamped, and cryptographically signed to government spec &mdash; with no merchant input.</p>
+            <div class="tile-eyebrow" data-i18n="features.tile2_eyebrow">02 / VAT Engine</div>
+            <h3 data-i18n-html="features.tile2_title">FTA spec.<br>Every&nbsp;invoice.</h3>
+            <p data-i18n="features.tile2_desc">Every invoice is formatted, UUID-stamped, and cryptographically signed to government spec &mdash; with no merchant input.</p>
             <div class="meter">
               <div class="meter-row">
-                <span class="meter-label">Q1 sales</span>
+                <span class="meter-label" data-i18n="features.meter_q1_sales">Q1 sales</span>
                 <span class="meter-amount">AED <span data-count="42180">42,180</span></span>
                 <div class="meter-bar"><div class="meter-bar-fill ok" style="width: 100%"></div></div>
               </div>
               <div class="meter-row">
-                <span class="meter-label">VAT collected</span>
+                <span class="meter-label" data-i18n="features.meter_vat_collected">VAT collected</span>
                 <span class="meter-amount">AED <span data-count="2109">2,109</span></span>
                 <div class="meter-bar"><div class="meter-bar-fill ok" style="width: 100%"></div></div>
               </div>
               <div class="meter-row">
-                <span class="meter-label">Input VAT</span>
+                <span class="meter-label" data-i18n="features.meter_input_vat">Input VAT</span>
                 <span class="meter-amount">AED <span data-count="614">614</span></span>
                 <div class="meter-bar"><div class="meter-bar-fill indigo" style="width: 38%"></div></div>
               </div>
               <div class="meter-row">
-                <span class="meter-label">Net payable</span>
+                <span class="meter-label" data-i18n="features.meter_net_payable">Net payable</span>
                 <span class="meter-amount">AED <span data-count="1495">1,495</span></span>
                 <div class="meter-bar"><div class="meter-bar-fill warn" style="width: 71%"></div></div>
               </div>
@@ -203,14 +274,17 @@
           <article class="tile t-wide-bottom reveal" id="accountants">
             <div class="tile-bottom-grid">
               <div class="tile-bottom-copy">
-                <div class="tile-eyebrow">03 / Accountant Portal</div>
-                <h3>Free for your accountant.<br>End of the shoebox.</h3>
-                <p>Your accountant gets a live, read-only dashboard of every client's
+                <div class="tile-eyebrow" data-i18n="features.tile3_eyebrow">03 / Accountant Portal</div>
+                <h3 data-i18n-html="features.tile3_title">Free for your accountant.<br>End of the shoebox.</h3>
+                <p data-i18n="features.tile3_desc">Your accountant gets a live, read-only dashboard of every client's
                    transactions &mdash; categorised, VAT-formatted, audit-ready. They stop
                    chasing you for paperwork. They recommend you to every new client.</p>
               </div>
               <div class="tile-bottom-shot">
-                <img src="/static/images/reports.png" alt="Accountant portal showing multi-client VAT positions and exportable reports" loading="lazy" decoding="async">
+                <img src="/static/images/reports.png"
+                     alt="Accountant portal showing multi-client VAT positions and exportable reports"
+                     data-i18n-attr="alt:features.tile3_alt"
+                     loading="lazy" decoding="async">
               </div>
             </div>
           </article>
@@ -223,12 +297,12 @@
       <div class="section-inner">
         <div class="ai-grid">
           <div class="ai-copy reveal">
-            <span class="section-eyebrow">Telegram Bot</span>
-            <h2 class="section-title">Your bookkeeper lives <em>in your Telegram chats.</em></h2>
-            <p class="ai-lede">
+            <span class="section-eyebrow" data-i18n="ai.eyebrow">Telegram Bot</span>
+            <h2 class="section-title" data-i18n-html="ai.title">Your bookkeeper lives <em>in your Telegram chats.</em></h2>
+            <p class="ai-lede" data-i18n="ai.lede">
               The web dashboard is for your accountant. The Telegram bot is where you
               actually live. Log a sale in chat, snap a photo of a supplier receipt,
-              ask "can I restock today?" &mdash; in Arabic, Urdu, Bengali, or English.
+              ask "can I restock today?" &mdash; in English, Arabic, Urdu, Hindi, or Malayalam.
               Same chat you already use all day. No new app to learn.
             </p>
 
@@ -238,8 +312,8 @@
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
                 </span>
                 <div>
-                  <strong>Log a sale or expense in chat</strong>
-                  <span>"142 tissue paper" or a photo of the receipt. Bot categorises, calculates VAT, signs the invoice.</span>
+                  <strong data-i18n="ai.bullet1_title">Log a sale or expense in chat</strong>
+                  <span data-i18n="ai.bullet1_desc">"142 tissue paper" or a photo of the receipt. Bot categorises, calculates VAT, signs the invoice.</span>
                 </div>
               </li>
               <li class="reveal reveal-delay-1">
@@ -247,8 +321,8 @@
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
                 </span>
                 <div>
-                  <strong>Cash on hand, right now</strong>
-                  <span>"After today's expenses, you have AED 1,450. Next supplier payment due in 3 days."</span>
+                  <strong data-i18n="ai.bullet2_title">Cash on hand, right now</strong>
+                  <span data-i18n="ai.bullet2_desc">"After today's expenses, you have AED 1,450. Next supplier payment due in 3 days."</span>
                 </div>
               </li>
               <li class="reveal reveal-delay-2">
@@ -256,8 +330,8 @@
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M7 14l4-4 3 3 5-5"/></svg>
                 </span>
                 <div>
-                  <strong>Restock at the right moment</strong>
-                  <span>"Tissue paper turns over every 11 days. Reorder within 4. Average spend: AED 280."</span>
+                  <strong data-i18n="ai.bullet3_title">Restock at the right moment</strong>
+                  <span data-i18n="ai.bullet3_desc">"Tissue paper turns over every 11 days. Reorder within 4. Average spend: AED 280."</span>
                 </div>
               </li>
               <li class="reveal reveal-delay-3">
@@ -265,8 +339,8 @@
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 10h18M8 4v6"/></svg>
                 </span>
                 <div>
-                  <strong>Staffing that pays for itself</strong>
-                  <span>"Tue/Thu afternoon sales are 40% lower. A single shift could save AED 600/month."</span>
+                  <strong data-i18n="ai.bullet4_title">Staffing that pays for itself</strong>
+                  <span data-i18n="ai.bullet4_desc">"Tue/Thu afternoon sales are 40% lower. A single shift could save AED 600/month."</span>
                 </div>
               </li>
               <li class="reveal reveal-delay-4">
@@ -274,13 +348,13 @@
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
                 </span>
                 <div>
-                  <strong>Profit, week by week</strong>
-                  <span>"Gross margin is 28% &mdash; down from 34% last week. Electronics are carrying you."</span>
+                  <strong data-i18n="ai.bullet5_title">Profit, week by week</strong>
+                  <span data-i18n="ai.bullet5_desc">"Gross margin is 28% &mdash; down from 34% last week. Electronics are carrying you."</span>
                 </div>
               </li>
             </ul>
 
-            <p class="ai-meta">Telegram for you &middot; Portal for your accountant</p>
+            <p class="ai-meta" data-i18n="ai.meta">Telegram for you &middot; Portal for your accountant</p>
           </div>
 
           <div class="ai-mockup-wrap reveal reveal-delay-2">
@@ -288,6 +362,7 @@
               <img
                 src="/static/images/telegram-chat.png"
                 alt="Heifer AI assistant chat on Telegram"
+                data-i18n-attr="alt:ai.mockup_alt"
                 class="ai-mockup-img"
               />
             </div>
@@ -301,9 +376,9 @@
     <section class="onboard-section" id="onboarding">
       <div class="section-inner">
         <header class="onboard-head reveal">
-          <span class="section-eyebrow">Onboarding</span>
-          <h2 class="section-title">One-on-one onboarding. <em>You change nothing.</em></h2>
-          <p class="onboard-sub">
+          <span class="section-eyebrow" data-i18n="onboard.eyebrow">Onboarding</span>
+          <h2 class="section-title" data-i18n-html="onboard.title">One-on-one onboarding. <em>You change nothing.</em></h2>
+          <p class="onboard-sub" data-i18n="onboard.sub">
             Heifer isn't software you download and figure out. We work with each merchant
             one-on-one &mdash; remotely, in your language &mdash; to migrate your books,
             set up your Telegram bot, and brief your accountant. You don't lift a finger.
@@ -313,33 +388,33 @@
         <ol class="onboard-grid">
           <li class="onboard-card reveal">
             <span class="onboard-num">01</span>
-            <h3>We start the conversation</h3>
-            <p>Not a demo. Not a signup form. A call about how your shop actually trades &mdash; in your language, on your time. We learn the business before we touch the books.</p>
-            <span class="onboard-tag mono">No demo &middot; No signup</span>
+            <h3 data-i18n="onboard.card1_title">We start the conversation</h3>
+            <p data-i18n="onboard.card1_desc">Not a demo. Not a signup form. A call about how your shop actually trades &mdash; in your language, on your time. We learn the business before we touch the books.</p>
+            <span class="onboard-tag mono" data-i18n="onboard.card1_tag">No demo &middot; No signup</span>
           </li>
           <li class="onboard-card reveal reveal-delay-1">
             <span class="onboard-num">02</span>
-            <h3>We migrate your books for you</h3>
-            <p>Send us your notebooks, WhatsApp invoice photos, supplier folders. We clean and load everything into Heifer &mdash; on our side. You don't fill a form, you don't re-type a receipt.</p>
-            <span class="onboard-tag mono">Done for you &middot; Not by you</span>
+            <h3 data-i18n="onboard.card2_title">We migrate your books for you</h3>
+            <p data-i18n="onboard.card2_desc">Send us your notebooks, WhatsApp invoice photos, supplier folders. We clean and load everything into Heifer &mdash; on our side. You don't fill a form, you don't re-type a receipt.</p>
+            <span class="onboard-tag mono" data-i18n="onboard.card2_tag">Done for you &middot; Not by you</span>
           </li>
           <li class="onboard-card reveal reveal-delay-2">
             <span class="onboard-num">03</span>
-            <h3>We set up your Telegram bot</h3>
-            <p>A short screen-share on your own phone. From that moment you log expenses, snap supplier receipts, and ask the bot anything &mdash; all in the Telegram chat you already check all day.</p>
-            <span class="onboard-tag mono">Telegram-first &middot; No new app</span>
+            <h3 data-i18n="onboard.card3_title">We set up your Telegram bot</h3>
+            <p data-i18n="onboard.card3_desc">A short screen-share on your own phone. From that moment you log expenses, snap supplier receipts, and ask the bot anything &mdash; all in the Telegram chat you already check all day.</p>
+            <span class="onboard-tag mono" data-i18n="onboard.card3_tag">Telegram-first &middot; No new app</span>
           </li>
           <li class="onboard-card reveal reveal-delay-3">
             <span class="onboard-num">04</span>
-            <h3>We brief your accountant</h3>
-            <p>A separate 30-minute call. Your accountant gets the free portal walkthrough and walks away with cleaner data than they've ever had from a bazaar client. They recommend us next.</p>
-            <span class="onboard-tag mono">Their workload drops &middot; Their fees protected</span>
+            <h3 data-i18n="onboard.card4_title">We brief your accountant</h3>
+            <p data-i18n="onboard.card4_desc">A separate 30-minute call. Your accountant gets the free portal walkthrough and walks away with cleaner data than they've ever had from a bazaar client. They recommend us next.</p>
+            <span class="onboard-tag mono" data-i18n="onboard.card4_tag">Their workload drops &middot; Their fees protected</span>
           </li>
         </ol>
 
         <p class="onboard-footnote reveal">
           <span class="onboard-footnote-dot"></span>
-          We work with a handful of merchants at a time &mdash; quietly, carefully, by invitation.
+          <span data-i18n="onboard.footnote">We work with a handful of merchants at a time &mdash; quietly, carefully, by invitation.</span>
         </p>
       </div>
     </section>
@@ -348,22 +423,22 @@
     <section class="how-section">
       <div class="section-inner">
         <header class="how-head">
-          <span class="section-eyebrow">How it works</span>
-          <h2 class="section-title">Three steps. <em>None of them yours.</em></h2>
-          <p class="how-sub">You ring up the sale. Heifer files the rest. Your accountant reads clean books at the end of the month.</p>
+          <span class="section-eyebrow" data-i18n="how.eyebrow">How it works</span>
+          <h2 class="section-title" data-i18n-html="how.title">Three steps. <em>None of them yours.</em></h2>
+          <p class="how-sub" data-i18n="how.sub">You ring up the sale. Heifer files the rest. Your accountant reads clean books at the end of the month.</p>
         </header>
 
         <div class="how-grid">
           <article class="how-step reveal">
             <span class="how-num">1</span>
-            <h3 class="how-step-title">Ring up the sale</h3>
-            <p class="how-step-desc">Heifer sits on your Android POS. Every transaction &mdash; cash or card &mdash; is captured the moment the customer pays.</p>
+            <h3 class="how-step-title" data-i18n="how.step1_title">Ring up the sale</h3>
+            <p class="how-step-desc" data-i18n="how.step1_desc">Heifer sits on your Android POS. Every transaction &mdash; cash or card &mdash; is captured the moment the customer pays.</p>
             <div class="how-mock how-mock-quickadd">
               <div class="how-mock-bar">
                 <span class="how-mock-dot"></span>
                 <span class="how-mock-dot"></span>
                 <span class="how-mock-dot"></span>
-                <span class="how-mock-title">POS &middot; Till 1</span>
+                <span class="how-mock-title" data-i18n="how.step1_mock_title">POS &middot; Till 1</span>
               </div>
               <div class="how-mock-body">
                 <div class="how-input">
@@ -371,14 +446,14 @@
                   <span class="how-input-amt">142</span>
                   <span class="how-input-cursor"></span>
                 </div>
-                <p class="how-input-desc">Tissue paper &middot; 2 packs</p>
+                <p class="how-input-desc" data-i18n="how.step1_desc_item">Tissue paper &middot; 2 packs</p>
                 <div class="how-chips">
-                  <span class="how-chip how-chip-on">Cash</span>
-                  <span class="how-chip">Card</span>
-                  <span class="how-chip">Credit</span>
+                  <span class="how-chip how-chip-on" data-i18n="how.step1_chip_cash">Cash</span>
+                  <span class="how-chip" data-i18n="how.step1_chip_card">Card</span>
+                  <span class="how-chip" data-i18n="how.step1_chip_credit">Credit</span>
                 </div>
                 <div class="how-status">
-                  <span class="how-status-dot"></span> Captured &middot; 0.2s
+                  <span class="how-status-dot"></span> <span data-i18n="how.step1_status">Captured &middot; 0.2s</span>
                 </div>
               </div>
             </div>
@@ -386,19 +461,19 @@
 
           <article class="how-step reveal reveal-delay-1">
             <span class="how-num">2</span>
-            <h3 class="how-step-title">Heifer files your VAT</h3>
-            <p class="how-step-desc">Every invoice is formatted to FTA spec, UUID-stamped, and pushed through certified compliance middleware. No paperwork on your side.</p>
+            <h3 class="how-step-title" data-i18n="how.step2_title">Heifer files your VAT</h3>
+            <p class="how-step-desc" data-i18n="how.step2_desc">Every invoice is formatted to FTA spec, UUID-stamped, and pushed through certified compliance middleware. No paperwork on your side.</p>
             <div class="how-mock how-mock-trend">
               <div class="how-mock-bar">
                 <span class="how-mock-dot"></span>
                 <span class="how-mock-dot"></span>
                 <span class="how-mock-dot"></span>
-                <span class="how-mock-title">VAT &middot; this quarter</span>
+                <span class="how-mock-title" data-i18n="how.step2_mock_title">VAT &middot; this quarter</span>
               </div>
               <div class="how-mock-body">
                 <div class="how-trend-row">
                   <span class="how-trend-amt">AED 1,495</span>
-                  <span class="how-trend-delta how-trend-positive">All invoices signed</span>
+                  <span class="how-trend-delta how-trend-positive" data-i18n="how.step2_signed">All invoices signed</span>
                 </div>
                 <svg class="how-trend-chart" viewBox="0 0 200 60" preserveAspectRatio="none">
                   <path d="M0 48 Q25 42 50 38 T100 28 T150 22 T200 14" fill="none" stroke="var(--accent)" stroke-width="2" stroke-linecap="round"/>
@@ -406,8 +481,8 @@
                 </svg>
                 <div class="how-budget">
                   <div class="how-budget-row">
-                    <span>FTA submission</span>
-                    <span class="how-budget-num how-budget-ok">Ready</span>
+                    <span data-i18n="how.step2_fta_submission">FTA submission</span>
+                    <span class="how-budget-num how-budget-ok" data-i18n="how.step2_ready">Ready</span>
                   </div>
                   <div class="how-budget-bar"><div class="how-budget-fill how-budget-fill-ok"></div></div>
                 </div>
@@ -417,23 +492,35 @@
 
           <article class="how-step reveal reveal-delay-2">
             <span class="how-num">3</span>
-            <h3 class="how-step-title">Ask Heifer anything</h3>
-            <p class="how-step-desc">"Can I afford to restock this week?" "How much VAT do I owe?" Get the answer in your language, instantly.</p>
+            <h3 class="how-step-title" data-i18n="how.step3_title">Ask Heifer anything</h3>
+            <p class="how-step-desc" data-i18n="how.step3_desc">"Can I afford to restock this week?" "How much VAT do I owe?" Get the answer in your language, instantly.</p>
             <div class="how-mock how-mock-chat">
               <div class="how-mock-bar">
                 <span class="how-mock-dot"></span>
                 <span class="how-mock-dot"></span>
                 <span class="how-mock-dot"></span>
-                <span class="how-mock-title">Heifer AI &middot; Telegram</span>
+                <span class="how-mock-title" data-i18n="how.step3_mock_title">Heifer AI &middot; Telegram</span>
               </div>
               <div class="how-mock-body">
-                <div class="how-chat-bubble how-chat-user">Can I restock today?</div>
-                <div class="how-chat-bubble how-chat-bot">
+                <div class="how-chat-bubble how-chat-user how-chat-voice" aria-label="Voice note">
+                  <span class="how-chat-voice-play" aria-hidden="true">
+                    <svg viewBox="0 0 10 12" fill="currentColor"><path d="M1 1v10l8-5z"/></svg>
+                  </span>
+                  <span class="how-chat-voice-wave" aria-hidden="true">
+                    <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+                  </span>
+                  <span class="how-chat-voice-time">0:04</span>
+                </div>
+                <p class="how-chat-transcript">
+                  <span class="how-chat-transcript-label" data-i18n="how.step3_transcript_label">Heifer heard</span>
+                  <span class="how-chat-transcript-text" data-i18n="how.step3_user_msg">&ldquo;Can I restock today?&rdquo;</span>
+                </p>
+                <div class="how-chat-bubble how-chat-bot" data-i18n="how.step3_bot_msg">
                   Yes &mdash; AED 1,450 in hand, AED 900 supplier payment due Friday.
                   Restock budget: AED 350 safe.
                 </div>
                 <div class="how-status">
-                  <span class="how-status-dot"></span> Replied &middot; 1.4s
+                  <span class="how-status-dot"></span> <span data-i18n="how.step3_status">Replied &middot; 1.4s</span>
                 </div>
               </div>
             </div>
@@ -447,35 +534,35 @@
       <div class="section-inner">
         <div class="pullquote">
           <div class="pullquote-mark">&ldquo;</div>
-          <blockquote>
+          <blockquote data-i18n-html="privacy.quote">
             Most bookkeeping starts with a signup form.<br>
             <strong>Heifer starts with a&nbsp;conversation.</strong>
           </blockquote>
-          <p class="pullquote-meta">What sets Heifer apart, in one&nbsp;line.</p>
+          <p class="pullquote-meta" data-i18n-html="privacy.quote_meta">What sets Heifer apart, in one&nbsp;line.</p>
         </div>
 
         <div class="privacy-stack">
           <div class="privacy-stat reveal">
             <div class="privacy-stat-num"><em data-count="0">0</em></div>
-            <div class="privacy-stat-label">Sign-up forms to fill</div>
+            <div class="privacy-stat-label" data-i18n="privacy.stat1">Sign-up forms to fill</div>
           </div>
           <div class="privacy-stat reveal reveal-delay-1">
             <div class="privacy-stat-num"><em data-count="0">0</em></div>
-            <div class="privacy-stat-label">Receipts re-typed</div>
+            <div class="privacy-stat-label" data-i18n="privacy.stat2">Receipts re-typed</div>
           </div>
           <div class="privacy-stat reveal reveal-delay-2">
             <div class="privacy-stat-num"><em data-count="0">0</em></div>
-            <div class="privacy-stat-label">Data leaves your region</div>
+            <div class="privacy-stat-label" data-i18n="privacy.stat3">Data leaves your region</div>
           </div>
           <div class="privacy-stat reveal reveal-delay-3">
-            <div class="privacy-stat-num"><em data-count="4">4</em></div>
-            <div class="privacy-stat-label">Languages, natively</div>
+            <div class="privacy-stat-num"><em data-count="5">5</em></div>
+            <div class="privacy-stat-label" data-i18n="privacy.stat4">Languages, natively</div>
           </div>
         </div>
 
         <p style="text-align: center; margin-top: 48px;">
           <a href="#book" class="privacy-link">
-            See how it fits your shop
+            <span data-i18n="privacy.link">See how it fits your shop</span>
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
           </a>
         </p>
@@ -487,20 +574,20 @@
       <div class="section-inner">
         <div class="download-card">
           <div class="download-logo"><span class="heifer-mark heifer-mark-lg">H</span></div>
-          <h2>Ready to <em>talk?</em></h2>
-          <p>We migrate your books. We set up your Telegram bot. We brief your accountant.
+          <h2 data-i18n-html="book.title">Ready to <em>talk?</em></h2>
+          <p data-i18n-html="book.sub">We migrate your books. We set up your Telegram bot. We brief your accountant.
              You change nothing about how you trade &mdash; we change everything about how it gets&nbsp;recorded.</p>
           <div style="display:flex;flex-wrap:wrap;justify-content:center;gap:12px;">
             <a href="mailto:hello@heifer.app?subject=Book%20a%20call" class="btn btn-primary btn-lg">
               <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7a2 2 0 0 1 1.72 2z"/></svg>
-              Book a call
+              <span data-i18n="book.btn_book">Book a free 30-min call</span>
             </a>
-            <a href="mailto:hello@heifer.app?subject=Accountant%20partner" class="btn btn-mac btn-lg">
+            <a href="/accountants" class="btn btn-mac btn-lg">
               <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16v6H4zM4 14h16v6H4z"/></svg>
-              Partner as an accountant
+              <span data-i18n="book.btn_partner">Partner as an accountant</span>
             </a>
           </div>
-          <p class="download-note">A handful of merchants at a time &middot; By invitation</p>
+          <p class="download-note" data-i18n="book.note">Free 30-min consultation &middot; No demo, no signup &middot; By invitation</p>
         </div>
       </div>
     </section>
@@ -511,46 +598,89 @@
         <div class="footer-brand">
           <a href="/" class="footer-brand-mark">
             <span class="heifer-mark" aria-hidden="true">H</span>
-            eifer
+            <span class="footer-brand-text">eifer</span>
           </a>
-          <p class="footer-tagline">Smart bookkeeping for UAE bazaar merchants.</p>
-        </div>
-        <div>
-          <h4>Product</h4>
-          <ul>
-            <li><a href="#features">What's inside</a></li>
-            <li><a href="#assistant">Telegram Bot</a></li>
-            <li><a href="#accountants">Accountant Portal</a></li>
-            <li><a href="#book">Book a call</a></li>
+          <p class="footer-tagline" data-i18n="footer.tagline">Smart bookkeeping built for UAE bazaar merchants &mdash; WhatsApp receipts in, FTA-ready books out.</p>
+          <div class="footer-status">
+            <span class="footer-status-dot" aria-hidden="true"></span>
+            <span data-i18n="footer.status">All systems normal &middot; Dubai &middot; UAE</span>
+          </div>
+          <ul class="footer-social" aria-label="Social links">
+            <li>
+              <a href="mailto:hello@heifer.app" aria-label="Email Heifer" title="Email">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.linkedin.com/company/heifer" target="_blank" rel="noopener" aria-label="Heifer on LinkedIn" title="LinkedIn">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.95v5.66H9.36V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.38-1.85 3.61 0 4.27 2.38 4.27 5.47v6.27zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45z"/></svg>
+              </a>
+            </li>
+            <li>
+              <a href="https://x.com/heiferapp" target="_blank" rel="noopener" aria-label="Heifer on X" title="X (Twitter)">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+              </a>
+            </li>
+            <li>
+              <a href="https://t.me/heiferbot" target="_blank" rel="noopener" aria-label="Heifer on Telegram" title="Telegram">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M9.78 15.27 9.6 19.4c.4 0 .58-.17.79-.38l1.89-1.8 3.92 2.87c.72.4 1.23.19 1.43-.66l2.59-12.13c.24-1.07-.39-1.49-1.09-1.23L3.6 11.42c-1.05.4-1.03.98-.18 1.24l4.45 1.39 10.34-6.51c.49-.31.93-.14.57.17z"/></svg>
+              </a>
+            </li>
           </ul>
         </div>
-        <div>
-          <h4>Compliance</h4>
+        <div class="footer-col">
+          <h4 data-i18n="footer.product">Product</h4>
           <ul>
-            <li><a href="#">UAE FTA e-invoicing</a></li>
-            <li><a href="#">Data residency</a></li>
-            <li><a href="#">Privacy policy</a></li>
-            <li><a href="#">Terms of use</a></li>
+            <li><a href="#features" data-i18n="footer.product_inside">What's inside</a></li>
+            <li><a href="#assistant" data-i18n="footer.product_bot">Telegram Bot</a></li>
+            <li><a href="/accountants" data-i18n="footer.product_accountants">Accountant Portal</a></li>
+            <li><a href="#book" data-i18n="footer.product_book">Book a free call</a></li>
           </ul>
         </div>
-        <div>
-          <h4>Connect</h4>
+        <div class="footer-col">
+          <h4 data-i18n="footer.compliance">Compliance</h4>
           <ul>
-            <li><a href="mailto:hello@heifer.app">Email</a></li>
-            <li><a href="mailto:hello@heifer.app?subject=Book%20a%20call">Book a call</a></li>
-            <li><a href="mailto:hello@heifer.app?subject=Accountant%20partner">Accountant partners</a></li>
+            <li><a href="#" data-i18n="footer.compliance_fta">UAE FTA e-invoicing</a></li>
+            <li><a href="#" data-i18n="footer.compliance_residency">Data residency</a></li>
+            <li><a href="#" data-i18n="footer.compliance_vat">VAT &amp; corporate tax</a></li>
+            <li><a href="#" data-i18n="footer.compliance_security">Security</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4 data-i18n="footer.company">Company</h4>
+          <ul>
+            <li><a href="#" data-i18n="footer.company_about">About</a></li>
+            <li><a href="#" data-i18n="footer.company_changelog">Changelog</a></li>
+            <li><a href="#" data-i18n="footer.company_privacy">Privacy policy</a></li>
+            <li><a href="#" data-i18n="footer.company_terms">Terms of use</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4 data-i18n="footer.connect">Connect</h4>
+          <ul>
+            <li><a href="mailto:hello@heifer.app">hello@heifer.app</a></li>
+            <li><a href="mailto:hello@heifer.app?subject=Book%20a%20call" data-i18n="footer.connect_book">Book a free call</a></li>
+            <li><a href="/accountants" data-i18n="footer.connect_partners">Accountant partners</a></li>
+            <li><a href="mailto:press@heifer.app" data-i18n="footer.connect_press">Press &amp; media</a></li>
           </ul>
         </div>
       </div>
       <div class="footer-bottom">
-        <span>© 2025 &middot; Heifer</span>
-        <span>Built with care from Canada</span>
+        <span class="footer-copy" data-i18n="footer.copyright">&copy; 2026 Heifer Technologies Inc.</span>
+        <span class="footer-meta" data-i18n="footer.meta">Designed in Toronto &middot; Built for the UAE</span>
+        <a href="#top" class="footer-top"
+           data-i18n-attr="aria-label:footer.back_top" aria-label="Back to top">
+          <span data-i18n="footer.back_top">Back to top</span>
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5"/><path d="m5 12 7-7 7 7"/></svg>
+        </a>
       </div>
     </footer>
 
 
     <!-- Scroll to top -->
-    <button class="scroll-top hidden" id="scroll-top" title="Back to top">
+    <button class="scroll-top hidden" id="scroll-top"
+            data-i18n-attr="title:fab.top;aria-label:fab.top"
+            title="Back to top" aria-label="Back to top">
       <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M18 15l-6-6-6 6"/></svg>
     </button>
 
@@ -558,12 +688,15 @@
 
   <script>window.STATIC_URL = "/static/";</script>
 
-  <button class="dark-fab" id="dark-toggle" title="Toggle dark mode" aria-label="Toggle dark mode">
+  <button class="dark-fab" id="dark-toggle"
+          data-i18n-attr="title:fab.dark;aria-label:fab.dark"
+          title="Toggle dark mode" aria-label="Toggle dark mode">
     <svg class="icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
     <svg class="icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>
   </button>
 
   <script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
+  <script src="/static/js/i18n.js"></script>
   <script src="/static/js/script.js"></script>
   <script src="/static/js/heifer.js" defer></script>
 </body>

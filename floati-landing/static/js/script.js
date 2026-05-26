@@ -304,18 +304,20 @@ function showMilestone(m) {
   setTimeout(() => popup.classList.add('hidden'), 4000)
 }
 
-// Nav shadow on scroll + scroll-to-top visibility
+// Nav scrolled state + scroll-to-top visibility
 const scrollTop = document.getElementById('scroll-top')
-window.addEventListener('scroll', () => {
-  const nav = document.querySelector('.nav')
-  if (nav) {
-    nav.style.boxShadow = window.scrollY > 20 ? '0 2px 20px rgba(0,0,0,0.06)' : 'none'
-  }
-  if (scrollTop) {
-    scrollTop.classList.toggle('visible', window.scrollY > 400)
-    scrollTop.classList.toggle('hidden', window.scrollY <= 400)
-  }
-})
+const navEl = document.querySelector('.nav')
+window.addEventListener(
+  'scroll',
+  () => {
+    if (navEl) navEl.classList.toggle('scrolled', window.scrollY > 20)
+    if (scrollTop) {
+      scrollTop.classList.toggle('visible', window.scrollY > 400)
+      scrollTop.classList.toggle('hidden', window.scrollY <= 400)
+    }
+  },
+  { passive: true }
+)
 
 // Scroll-to-top click is handled by Lenis in heifer.js
 
@@ -373,4 +375,84 @@ if (dropTrigger && dropMenu) {
       dropMenu.classList.remove('open')
     }
   })
+}
+
+// Language switcher
+// Persists the user's choice and updates the html lang attribute so screen
+// readers / SEO pick up the active language. Localised copy isn't wired up
+// yet, so we deliberately do NOT flip document direction — that would break
+// the LTR-only layout. A `language-change` event is dispatched so future
+// translation code can react.
+const langTrigger = document.getElementById('nav-lang-trigger')
+const langMenu = document.getElementById('nav-lang-menu')
+const langCodeEl = document.getElementById('nav-lang-code')
+if (langTrigger && langMenu) {
+  const langItems = langMenu.querySelectorAll('.nav-lang-item')
+  const STORAGE_KEY = 'heifer-lang'
+
+  function setOpen(open) {
+    langMenu.classList.toggle('open', open)
+    langTrigger.classList.toggle('open', open)
+    langTrigger.setAttribute('aria-expanded', open ? 'true' : 'false')
+  }
+
+  function applyLang(lang) {
+    const item = langMenu.querySelector('.nav-lang-item[data-lang="' + lang + '"]')
+    if (!item) return
+    const code = item.dataset.code
+    const dir = item.dataset.dir || 'ltr'
+    const en = item.dataset.en || code
+
+    document.documentElement.setAttribute('lang', lang)
+    if (langCodeEl) langCodeEl.textContent = code
+    langTrigger.setAttribute('aria-label', 'Language: ' + en)
+
+    langItems.forEach(i => {
+      const on = i === item
+      i.classList.toggle('active', on)
+      i.setAttribute('aria-selected', on ? 'true' : 'false')
+    })
+
+    try { localStorage.setItem(STORAGE_KEY, lang) } catch {}
+    document.dispatchEvent(new CustomEvent('language-change', { detail: { lang, code, dir } }))
+  }
+
+  langTrigger.addEventListener('click', (e) => {
+    e.preventDefault()
+    e.stopPropagation()
+    setOpen(!langMenu.classList.contains('open'))
+  })
+
+  langItems.forEach(item => {
+    item.addEventListener('click', () => {
+      applyLang(item.dataset.lang)
+      setOpen(false)
+    })
+  })
+
+  document.addEventListener('click', (e) => {
+    if (!e.target.closest('.nav-lang')) setOpen(false)
+  })
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && langMenu.classList.contains('open')) {
+      setOpen(false)
+      langTrigger.focus()
+    }
+  })
+
+  // Initial state: saved preference > html[lang] > 'en'
+  let initialLang = 'en'
+  try {
+    const saved = localStorage.getItem(STORAGE_KEY)
+    if (saved && langMenu.querySelector('.nav-lang-item[data-lang="' + saved + '"]')) {
+      initialLang = saved
+    } else {
+      const htmlLang = (document.documentElement.lang || 'en').toLowerCase().split('-')[0]
+      if (langMenu.querySelector('.nav-lang-item[data-lang="' + htmlLang + '"]')) {
+        initialLang = htmlLang
+      }
+    }
+  } catch {}
+  applyLang(initialLang)
 }

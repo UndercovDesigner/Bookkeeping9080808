@@ -1,0 +1,615 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Heifer for Accountants | Free portal · 20% revenue share</title>
+
+  <meta name="description" content="Your bazaar clients on one screen. Free forever for accounting firms. Earn 20% recurring on every merchant you bring to Heifer. UAE FTA-compliant, multilingual, white-glove onboarding.">
+  <meta name="theme-color" content="#0d6e5c">
+  <meta name="keywords" content="heifer accountant portal, uae accounting firm partner program, bookkeeping referral, fta tax agent, vat compliance partner, bazaar bookkeeping for accountants">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://heifer.app/accountants">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Heifer for Accountants | Free portal · 20% revenue share">
+  <meta property="og:description" content="Every bazaar client on one screen. Free forever. Earn 20% recurring on every merchant you bring.">
+  <meta property="og:image" content="/static/images/reports.png">
+  <meta property="og:url" content="https://heifer.app/accountants">
+  <meta property="og:site_name" content="Heifer">
+  <meta property="og:locale" content="en_US">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Heifer for Accountants — partner program">
+  <meta name="twitter:description" content="Clean digital books from bazaar clients, plus a 20% recurring share of revenue.">
+  <meta name="twitter:image" content="/static/images/reports.png">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Heifer for Accountants",
+    "description": "Partner program for UAE accounting firms. Free accountant portal, revenue share on every client referred.",
+    "url": "https://heifer.app/accountants",
+    "publisher": {
+      "@type": "Organization",
+      "name": "Heifer",
+      "url": "https://heifer.app",
+      "areaServed": ["AE"]
+    }
+  }
+  </script>
+
+  <link rel="icon" id="favicon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%230d6e5c'/><text x='16' y='23' text-anchor='middle' font-family='Georgia,serif' font-size='22' font-weight='bold' font-style='italic' fill='white'>H</text></svg>">
+  <link rel="manifest" href="#">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="Heifer">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <link rel="preload" as="font" type="font/woff2" href="/static/fonts/rP2Yp2ywxg089UriI5-g4vlH9VoD8Cmcqbu0-K4.7c87a648293f.woff2" crossorigin>
+  <link rel="stylesheet" href="/static/fonts/fonts.css">
+  <link rel="stylesheet" href="/static/css/style.css">
+  <link rel="stylesheet" href="/static/css/extras.css">
+  <script>
+    if (localStorage.getItem('heifer-web-dark') === 'true') document.documentElement.classList.add('dark');
+  </script>
+</head>
+<body>
+
+  <div id="splash" class="splash hidden" style="display:none"></div>
+
+  <div id="site" class="site">
+
+    <!-- Nav (same as home, with "For Accountants" active) -->
+    <nav class="nav">
+      <div class="nav-inner">
+        <a href="/" class="nav-logo">
+          <span class="heifer-mark" aria-hidden="true">H</span>
+          <span class="nav-logo-text">eifer</span>
+        </a>
+        <div class="nav-links" id="nav-links">
+          <a href="/" data-i18n="nav.home">Home</a>
+          <a href="/#features" data-i18n="nav.features">Features</a>
+          <a href="/#assistant" data-i18n="nav.telegram_bot">Telegram Bot</a>
+          <a href="/#onboarding" data-i18n="nav.onboarding">Onboarding</a>
+          <a href="/accountants" class="active" data-i18n="nav.for_accountants">For Accountants</a>
+        </div>
+        <div class="nav-lang" id="nav-lang">
+          <button class="nav-lang-trigger" id="nav-lang-trigger" type="button"
+                  aria-haspopup="listbox" aria-expanded="false"
+                  data-i18n-attr="aria-label:nav.choose_language" aria-label="Choose language">
+            <svg class="nav-lang-globe" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <circle cx="8" cy="8" r="6.25"/>
+              <path d="M1.75 8h12.5"/>
+              <path d="M8 1.75c1.9 2 2.95 4.05 2.95 6.25S9.9 12.25 8 14.25"/>
+              <path d="M8 1.75c-1.9 2-2.95 4.05-2.95 6.25S6.1 12.25 8 14.25"/>
+            </svg>
+            <span class="nav-lang-code" id="nav-lang-code">EN</span>
+            <svg class="nav-lang-chev" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M3 4.5 6 7.5l3-3"/>
+            </svg>
+          </button>
+          <div class="nav-lang-menu" id="nav-lang-menu" role="listbox"
+               data-i18n-attr="aria-label:nav.language" aria-label="Language">
+            <div class="nav-lang-head" data-i18n="nav.language">Language</div>
+            <button class="nav-lang-item" type="button" role="option"
+                    data-lang="en" data-code="EN" data-dir="ltr" data-en="English">
+              <span class="nav-lang-item-text">
+                <span class="nav-lang-native" lang="en">English</span>
+                <span class="nav-lang-en">English</span>
+              </span>
+              <span class="nav-lang-item-code">EN</span>
+            </button>
+            <button class="nav-lang-item" type="button" role="option"
+                    data-lang="ar" data-code="AR" data-dir="rtl" data-en="Arabic">
+              <span class="nav-lang-item-text">
+                <span class="nav-lang-native" lang="ar" dir="rtl">العربية</span>
+                <span class="nav-lang-en">Arabic</span>
+              </span>
+              <span class="nav-lang-item-code">AR</span>
+            </button>
+            <button class="nav-lang-item" type="button" role="option"
+                    data-lang="ur" data-code="UR" data-dir="rtl" data-en="Urdu">
+              <span class="nav-lang-item-text">
+                <span class="nav-lang-native" lang="ur" dir="rtl">اردو</span>
+                <span class="nav-lang-en">Urdu</span>
+              </span>
+              <span class="nav-lang-item-code">UR</span>
+            </button>
+            <button class="nav-lang-item" type="button" role="option"
+                    data-lang="hi" data-code="HI" data-dir="ltr" data-en="Hindi">
+              <span class="nav-lang-item-text">
+                <span class="nav-lang-native" lang="hi">हिन्दी</span>
+                <span class="nav-lang-en">Hindi</span>
+              </span>
+              <span class="nav-lang-item-code">HI</span>
+            </button>
+            <button class="nav-lang-item" type="button" role="option"
+                    data-lang="ml" data-code="ML" data-dir="ltr" data-en="Malayalam">
+              <span class="nav-lang-item-text">
+                <span class="nav-lang-native" lang="ml">മലയാളം</span>
+                <span class="nav-lang-en">Malayalam</span>
+              </span>
+              <span class="nav-lang-item-code">ML</span>
+            </button>
+            <div class="nav-lang-foot">
+              <span class="nav-lang-foot-dot" aria-hidden="true"></span>
+              <span data-i18n="nav.more_languages">More languages on request</span>
+            </div>
+          </div>
+        </div>
+        <a href="#apply" class="nav-cta">
+          <span>Apply to partner</span>
+          <span class="nav-cta-icon">
+            <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9 9 3M4 3h5v5"/></svg>
+          </span>
+        </a>
+        <button class="hamburger" id="hamburger"
+                data-i18n-attr="aria-label:nav.menu" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </nav>
+
+    <!-- Hero (accountant pitch) -->
+    <section class="hero">
+      <div class="hero-content">
+        <span class="hero-badge reveal">Partner program &middot; For UAE accounting firms</span>
+        <h1 class="hero-title reveal reveal-delay-1">Every bazaar client.<br>One screen. <span class="hero-accent">Free&nbsp;forever.</span></h1>
+        <p class="hero-sub reveal reveal-delay-2">
+          Heifer is the bookkeeping layer for the merchants you can't get clean data out of &mdash; the cash-only shops,
+          the WhatsApp invoice sellers, the bazaar floor. Your portal is free for life.
+          You earn <strong style="color:var(--t1);font-weight:500">20% recurring</strong> on every client you bring on, paid monthly.
+        </p>
+        <div class="hero-actions reveal reveal-delay-3">
+          <a href="#apply" class="btn btn-primary">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="8.5" cy="7" r="4"/><path d="M20 8v6M17 11h6"/></svg>
+            <span>Apply to the partner program</span>
+          </a>
+          <a href="#portal" class="btn btn-mac">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M3 10h18"/></svg>
+            <span>See the portal</span>
+          </a>
+        </div>
+        <p class="hero-stats">
+          <span><strong style="color:var(--t1);font-weight:500">Free</strong> for your firm</span>
+          <span class="dot"></span>
+          <span><strong style="color:var(--t1);font-weight:500">20%</strong> recurring</span>
+          <span class="dot"></span>
+          <span><strong style="color:var(--t1);font-weight:500">FTA</strong>-compliant invoicing</span>
+          <span class="dot"></span>
+          <span>White-glove client <strong style="color:var(--t1);font-weight:500">onboarding</strong></span>
+        </p>
+      </div>
+      <div class="hero-visual">
+        <div class="hero-mockup">
+          <div class="mockup-bar">
+            <div class="mockup-dots"><span></span><span></span><span></span></div>
+            <span class="mockup-title">Heifer &middot; Firm dashboard</span>
+          </div>
+          <img src="/static/images/reports.png"
+               alt="Heifer accountant portal showing every client's live VAT position on one screen"
+               class="mockup-img" id="hero-img" fetchpriority="high" decoding="async">
+        </div>
+        <div class="hero-float float-1"></div>
+        <div class="hero-float float-2"></div>
+        <div class="hero-float float-3"></div>
+      </div>
+    </section>
+
+    <!-- Trust rail -->
+    <section class="trust-rail">
+      <div class="trust-row">
+        <span class="trust-item"><span class="trust-mark"><svg viewBox="0 0 8 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M1 4l2 2 4-4"/></svg></span> <span>Free firm portal, every client</span></span>
+        <span class="trust-item"><span class="trust-mark"><svg viewBox="0 0 8 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M1 4l2 2 4-4"/></svg></span> <span>Live VAT positions, signed invoices</span></span>
+        <span class="trust-item"><span class="trust-mark"><svg viewBox="0 0 8 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M1 4l2 2 4-4"/></svg></span> <span>20% recurring on every client</span></span>
+        <span class="trust-item"><span class="trust-mark"><svg viewBox="0 0 8 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M1 4l2 2 4-4"/></svg></span> <span>UAE-hosted, FTA-spec</span></span>
+      </div>
+    </section>
+
+    <!-- Why partner (Bento) -->
+    <section class="features" id="portal">
+      <div class="section-inner">
+        <header class="section-head">
+          <div>
+            <span class="section-eyebrow">Why partner</span>
+            <h2 class="section-title">The clients you can't digitise.<br><em>Now you can.</em></h2>
+          </div>
+          <p class="section-aside">
+            Cloud accounting works when the client already has clean data. Bazaar merchants
+            don't. We give them a Telegram bot that captures every sale and receipt &mdash; in their
+            language &mdash; and we give you a portal that turns it into audit-ready books.
+          </p>
+        </header>
+
+        <div class="bento">
+          <article class="tile t-feature-hero reveal">
+            <div class="tile-eyebrow">01 / Multi-client portal</div>
+            <h3>Every client's VAT position. One&nbsp;screen.</h3>
+            <p>Live, read-only dashboard across your entire book. Filter by quarter, drill into a
+               single transaction, export FTA-ready returns in two clicks. You stop chasing
+               WhatsApp photos; the data is just there.</p>
+            <div class="tile-shot">
+              <img src="/static/images/reports.png"
+                   alt="Heifer firm dashboard showing every client's live VAT position"
+                   loading="lazy" decoding="async">
+            </div>
+          </article>
+
+          <article class="tile t-tall reveal reveal-delay-1">
+            <div class="tile-eyebrow">02 / Revenue share</div>
+            <h3>Earn on every client.<br>Paid&nbsp;monthly.</h3>
+            <p>20% of each client's subscription, recurring &mdash; not a one-off finder's fee. A firm with 30 active
+               Heifer clients earns AED 5,400 a year, on top of their normal billings.</p>
+            <div class="meter">
+              <div class="meter-row">
+                <span class="meter-label">Active clients</span>
+                <span class="meter-amount"><span data-count="30">30</span></span>
+                <div class="meter-bar"><div class="meter-bar-fill ok" style="width: 100%"></div></div>
+              </div>
+              <div class="meter-row">
+                <span class="meter-label">Share per client</span>
+                <span class="meter-amount">AED <span data-count="15">15</span> / mo</span>
+                <div class="meter-bar"><div class="meter-bar-fill indigo" style="width: 20%"></div></div>
+              </div>
+              <div class="meter-row">
+                <span class="meter-label">Monthly payout</span>
+                <span class="meter-amount">AED <span data-count="450">450</span></span>
+                <div class="meter-bar"><div class="meter-bar-fill ok" style="width: 60%"></div></div>
+              </div>
+              <div class="meter-row">
+                <span class="meter-label">Year one</span>
+                <span class="meter-amount">AED <span data-count="5400">5,400</span></span>
+                <div class="meter-bar"><div class="meter-bar-fill warn" style="width: 90%"></div></div>
+              </div>
+            </div>
+          </article>
+
+          <article class="tile t-wide-bottom reveal">
+            <div class="tile-bottom-grid">
+              <div class="tile-bottom-copy">
+                <div class="tile-eyebrow">03 / White-glove onboarding</div>
+                <h3>We onboard your clients.<br>You don't lift a finger.</h3>
+                <p>Send us a list. We run the merchant calls, migrate their notebooks and
+                   WhatsApp receipts, set up their Telegram bot, and brief them in their
+                   language &mdash; Arabic, Urdu, Hindi, Malayalam, English. You only show up
+                   for the 30-minute walkthrough of <em>your</em> firm portal.</p>
+              </div>
+              <div class="tile-bottom-shot">
+                <img src="/static/images/dashboard-light.png"
+                     alt="Heifer merchant dashboard, what your clients use day-to-day"
+                     loading="lazy" decoding="async">
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- How partnership works -->
+    <section class="how-section" id="how">
+      <div class="section-inner">
+        <header class="how-head">
+          <span class="section-eyebrow">How partnership works</span>
+          <h2 class="section-title">Three steps. <em>You only do the first&nbsp;one.</em></h2>
+          <p class="how-sub">From application to first payout. No paperwork, no minimums, no exclusivity clauses.</p>
+        </header>
+
+        <div class="how-grid">
+          <article class="how-step reveal">
+            <span class="how-num">1</span>
+            <h3 class="how-step-title">Apply &middot; 15-min call</h3>
+            <p class="how-step-desc">Short call with our partnerships lead. We learn your firm, your typical SMB client mix,
+               and which clients are most likely to fit Heifer. No demo deck, no signup form.</p>
+            <div class="how-mock acct-mock-card">
+              <div class="how-mock-bar">
+                <span class="how-mock-dot"></span>
+                <span class="how-mock-dot"></span>
+                <span class="how-mock-dot"></span>
+                <span class="how-mock-title">Partner application</span>
+              </div>
+              <div class="how-mock-body">
+                <ul class="acct-checks">
+                  <li><span class="acct-check">&#10003;</span> Firm name &amp; FTA agent ID</li>
+                  <li><span class="acct-check">&#10003;</span> Rough SMB client count</li>
+                  <li><span class="acct-check">&#10003;</span> Preferred call language</li>
+                </ul>
+                <div class="how-status">
+                  <span class="how-status-dot"></span> <span>Reply within 1 business day</span>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="how-step reveal reveal-delay-1">
+            <span class="how-num">2</span>
+            <h3 class="how-step-title">We onboard your first clients</h3>
+            <p class="how-step-desc">Pick 3&ndash;5 clients to start. We run every merchant call in their language, migrate their
+               books on our side, and set up the Telegram bot. White-glove. Free. You watch.</p>
+            <div class="how-mock acct-mock-roster">
+              <div class="how-mock-bar">
+                <span class="how-mock-dot"></span>
+                <span class="how-mock-dot"></span>
+                <span class="how-mock-dot"></span>
+                <span class="how-mock-title">Client roster</span>
+              </div>
+              <div class="how-mock-body">
+                <div class="acct-row">
+                  <span class="acct-row-name">Al Noor Tissues LLC</span>
+                  <span class="acct-row-tag acct-row-tag-ok">Live</span>
+                </div>
+                <div class="acct-row">
+                  <span class="acct-row-name">Bismillah Electronics</span>
+                  <span class="acct-row-tag acct-row-tag-ok">Live</span>
+                </div>
+                <div class="acct-row">
+                  <span class="acct-row-name">Karama Grocery FZ</span>
+                  <span class="acct-row-tag acct-row-tag-warm">Onboarding</span>
+                </div>
+                <div class="acct-row">
+                  <span class="acct-row-name">Sharjah Spice Co.</span>
+                  <span class="acct-row-tag">Invited</span>
+                </div>
+                <div class="how-status">
+                  <span class="how-status-dot"></span> <span>3 / 4 fully migrated</span>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="how-step reveal reveal-delay-2">
+            <span class="how-num">3</span>
+            <h3 class="how-step-title">You earn &middot; paid every month</h3>
+            <p class="how-step-desc">20% of every client's AED 75/mo subscription, paid into your firm account on the 1st.
+               Recurring for the life of the client. Real-time payout statement inside the portal.</p>
+            <div class="how-mock acct-mock-payout">
+              <div class="how-mock-bar">
+                <span class="how-mock-dot"></span>
+                <span class="how-mock-dot"></span>
+                <span class="how-mock-dot"></span>
+                <span class="how-mock-title">Partner payout &middot; May</span>
+              </div>
+              <div class="how-mock-body">
+                <div class="acct-payout-amt">AED 450.00</div>
+                <div class="acct-payout-meta">30 active clients &middot; 20% recurring</div>
+                <div class="acct-payout-row">
+                  <span>Apr</span>
+                  <span class="acct-payout-bar"><span style="width:62%"></span></span>
+                  <span class="acct-payout-num">AED 420</span>
+                </div>
+                <div class="acct-payout-row">
+                  <span>May</span>
+                  <span class="acct-payout-bar"><span style="width:68%"></span></span>
+                  <span class="acct-payout-num">AED 450</span>
+                </div>
+                <div class="acct-payout-row">
+                  <span>Jun</span>
+                  <span class="acct-payout-bar"><span style="width:74%"></span></span>
+                  <span class="acct-payout-num">AED 495</span>
+                </div>
+                <div class="how-status">
+                  <span class="how-status-dot"></span> <span>Next payout: 1 Jun</span>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pullquote / firm-of-the-future promise -->
+    <section class="privacy-section">
+      <div class="section-inner">
+        <div class="pullquote">
+          <div class="pullquote-mark">&ldquo;</div>
+          <blockquote>
+            Most software sends accountants the bill.<br>
+            <strong>Heifer sends you the books &mdash; and a&nbsp;cut.</strong>
+          </blockquote>
+          <p class="pullquote-meta">The Heifer partner program, in one&nbsp;line.</p>
+        </div>
+
+        <div class="privacy-stack">
+          <div class="privacy-stat reveal">
+            <div class="privacy-stat-num"><em data-count="0">0</em></div>
+            <div class="privacy-stat-label">Cost to your firm</div>
+          </div>
+          <div class="privacy-stat reveal reveal-delay-1">
+            <div class="privacy-stat-num"><em data-count="20">20</em>%</div>
+            <div class="privacy-stat-label">Recurring revenue share</div>
+          </div>
+          <div class="privacy-stat reveal reveal-delay-2">
+            <div class="privacy-stat-num"><em data-count="0">0</em></div>
+            <div class="privacy-stat-label">Minimum clients to start</div>
+          </div>
+          <div class="privacy-stat reveal reveal-delay-3">
+            <div class="privacy-stat-num"><em data-count="5">5</em></div>
+            <div class="privacy-stat-label">Languages your clients speak</div>
+          </div>
+        </div>
+
+        <p style="text-align: center; margin-top: 48px;">
+          <a href="#apply" class="privacy-link">
+            <span>See if your firm fits</span>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+          </a>
+        </p>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="acct-faq">
+      <div class="section-inner">
+        <header class="how-head">
+          <span class="section-eyebrow">Partner FAQ</span>
+          <h2 class="section-title">Quick answers <em>before the call.</em></h2>
+        </header>
+
+        <div class="acct-faq-grid">
+          <details class="acct-faq-item reveal" open>
+            <summary>Is the portal really free for our firm?</summary>
+            <p>Yes &mdash; permanently, with no client minimum. The portal is monetised through the merchant
+               subscription (AED 75/mo per merchant). Your firm pays nothing, and we pay you 20% of every
+               merchant you bring on.</p>
+          </details>
+          <details class="acct-faq-item reveal reveal-delay-1">
+            <summary>What happens if a client we refer cancels?</summary>
+            <p>The payout simply stops on the next billing cycle. There's no clawback, no minimum
+               commitment period, no penalties.</p>
+          </details>
+          <details class="acct-faq-item reveal reveal-delay-2">
+            <summary>Do we have to push Heifer on every client?</summary>
+            <p>No. There's no exclusivity and no quota. Most partner firms recommend Heifer only to the
+               cash-heavy clients where Xero/Zoho doesn't fit &mdash; bazaar shops, kiosks, small grocers, market
+               vendors. That's where the data is broken today.</p>
+          </details>
+          <details class="acct-faq-item reveal reveal-delay-3">
+            <summary>Can the portal be co-branded with our firm?</summary>
+            <p>Yes &mdash; firm logo and colours on the merchant-facing reports, and a "Managed by [Firm Name]"
+               line in the bot's quarterly VAT summary. Available from your second active client onwards.</p>
+          </details>
+          <details class="acct-faq-item reveal">
+            <summary>Is Heifer an FTA-registered tax agent?</summary>
+            <p>No &mdash; we're the software layer. You remain the tax agent of record for your clients. We
+               produce FTA-spec invoices and quarterly returns; you review, sign, and file.</p>
+          </details>
+          <details class="acct-faq-item reveal reveal-delay-1">
+            <summary>How quickly can a new client be live?</summary>
+            <p>Typically 5&ndash;7 business days from the merchant onboarding call. We migrate their existing
+               books, set up the Telegram bot, and run a 30-min walkthrough &mdash; entirely on our side.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- Apply CTA -->
+    <section class="download" id="apply">
+      <div class="section-inner">
+        <div class="download-card">
+          <div class="download-logo"><span class="heifer-mark heifer-mark-lg">H</span></div>
+          <h2>Partner with <em>Heifer.</em></h2>
+          <p>Free firm portal. 20% recurring on every client. White-glove onboarding done on our side.
+             We're taking on a small cohort of UAE accounting firms this quarter &mdash; tell us about
+             your book and we'll set up a 15-minute call.</p>
+          <div style="display:flex;flex-wrap:wrap;justify-content:center;gap:12px;">
+            <a href="mailto:partners@heifer.app?subject=Partner%20program%20application&body=Firm%20name%3A%20%0AFTA%20agent%20ID%20(if%20any)%3A%20%0ARough%20SMB%20client%20count%3A%20%0APreferred%20call%20language%3A%20%0ABest%20time%20to%20call%3A%20" class="btn btn-primary btn-lg">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="8.5" cy="7" r="4"/><path d="M20 8v6M17 11h6"/></svg>
+              <span>Apply to the partner program</span>
+            </a>
+            <a href="/" class="btn btn-mac btn-lg">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12 12 3l9 9"/><path d="M5 10v10h14V10"/></svg>
+              <span>I'm a merchant, take me home</span>
+            </a>
+          </div>
+          <p class="download-note">No minimum clients &middot; No exclusivity &middot; Payouts monthly</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <a href="/" class="footer-brand-mark">
+            <span class="heifer-mark" aria-hidden="true">H</span>
+            <span class="footer-brand-text">eifer</span>
+          </a>
+          <p class="footer-tagline" data-i18n="footer.tagline">Smart bookkeeping built for UAE bazaar merchants &mdash; WhatsApp receipts in, FTA-ready books out.</p>
+          <div class="footer-status">
+            <span class="footer-status-dot" aria-hidden="true"></span>
+            <span data-i18n="footer.status">All systems normal &middot; Dubai &middot; UAE</span>
+          </div>
+          <ul class="footer-social" aria-label="Social links">
+            <li>
+              <a href="mailto:hello@heifer.app" aria-label="Email Heifer" title="Email">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.linkedin.com/company/heifer" target="_blank" rel="noopener" aria-label="Heifer on LinkedIn" title="LinkedIn">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.95v5.66H9.36V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.38-1.85 3.61 0 4.27 2.38 4.27 5.47v6.27zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45z"/></svg>
+              </a>
+            </li>
+            <li>
+              <a href="https://x.com/heiferapp" target="_blank" rel="noopener" aria-label="Heifer on X" title="X (Twitter)">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+              </a>
+            </li>
+            <li>
+              <a href="https://t.me/heiferbot" target="_blank" rel="noopener" aria-label="Heifer on Telegram" title="Telegram">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M9.78 15.27 9.6 19.4c.4 0 .58-.17.79-.38l1.89-1.8 3.92 2.87c.72.4 1.23.19 1.43-.66l2.59-12.13c.24-1.07-.39-1.49-1.09-1.23L3.6 11.42c-1.05.4-1.03.98-.18 1.24l4.45 1.39 10.34-6.51c.49-.31.93-.14.57.17z"/></svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4 data-i18n="footer.product">Product</h4>
+          <ul>
+            <li><a href="/#features" data-i18n="footer.product_inside">What's inside</a></li>
+            <li><a href="/#assistant" data-i18n="footer.product_bot">Telegram Bot</a></li>
+            <li><a href="/accountants" data-i18n="footer.product_accountants">Accountant Portal</a></li>
+            <li><a href="/#book" data-i18n="footer.product_book">Book a free call</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4 data-i18n="footer.compliance">Compliance</h4>
+          <ul>
+            <li><a href="#" data-i18n="footer.compliance_fta">UAE FTA e-invoicing</a></li>
+            <li><a href="#" data-i18n="footer.compliance_residency">Data residency</a></li>
+            <li><a href="#" data-i18n="footer.compliance_vat">VAT &amp; corporate tax</a></li>
+            <li><a href="#" data-i18n="footer.compliance_security">Security</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4 data-i18n="footer.company">Company</h4>
+          <ul>
+            <li><a href="#" data-i18n="footer.company_about">About</a></li>
+            <li><a href="#" data-i18n="footer.company_changelog">Changelog</a></li>
+            <li><a href="#" data-i18n="footer.company_privacy">Privacy policy</a></li>
+            <li><a href="#" data-i18n="footer.company_terms">Terms of use</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4 data-i18n="footer.connect">Connect</h4>
+          <ul>
+            <li><a href="mailto:hello@heifer.app">hello@heifer.app</a></li>
+            <li><a href="mailto:hello@heifer.app?subject=Book%20a%20call" data-i18n="footer.connect_book">Book a free call</a></li>
+            <li><a href="mailto:partners@heifer.app?subject=Partner%20program%20application" data-i18n="footer.connect_partners">Accountant partners</a></li>
+            <li><a href="mailto:press@heifer.app" data-i18n="footer.connect_press">Press &amp; media</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span class="footer-copy" data-i18n="footer.copyright">&copy; 2026 Heifer Technologies Inc.</span>
+        <span class="footer-meta" data-i18n="footer.meta">Designed in Toronto &middot; Built for the UAE</span>
+        <a href="#top" class="footer-top"
+           data-i18n-attr="aria-label:footer.back_top" aria-label="Back to top">
+          <span data-i18n="footer.back_top">Back to top</span>
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5"/><path d="m5 12 7-7 7 7"/></svg>
+        </a>
+      </div>
+    </footer>
+
+    <button class="scroll-top hidden" id="scroll-top"
+            data-i18n-attr="title:fab.top;aria-label:fab.top"
+            title="Back to top" aria-label="Back to top">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M18 15l-6-6-6 6"/></svg>
+    </button>
+
+  </div>
+
+  <script>window.STATIC_URL = "/static/";</script>
+
+  <button class="dark-fab" id="dark-toggle"
+          data-i18n-attr="title:fab.dark;aria-label:fab.dark"
+          title="Toggle dark mode" aria-label="Toggle dark mode">
+    <svg class="icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+    <svg class="icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>
+  </button>
+
+  <script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
+  <script src="/static/js/i18n.js"></script>
+  <script src="/static/js/script.js"></script>
+  <script src="/static/js/heifer.js" defer></script>
+</body>
+</html>
