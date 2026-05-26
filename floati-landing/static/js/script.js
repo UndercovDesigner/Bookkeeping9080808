@@ -342,18 +342,44 @@ if (changelogOverlay) changelogOverlay.addEventListener('click', closeChangelog)
 // Hamburger menu
 const hamburger = document.getElementById('hamburger')
 const navLinks = document.getElementById('nav-links')
+
+function setMobileNavOpen(open) {
+  if (!hamburger || !navLinks) return
+  hamburger.classList.toggle('open', open)
+  navLinks.classList.toggle('open', open)
+  document.body.classList.toggle('nav-open', open)
+  hamburger.setAttribute('aria-expanded', open ? 'true' : 'false')
+}
+
 if (hamburger && navLinks) {
-  hamburger.addEventListener('click', () => {
-    hamburger.classList.toggle('open')
-    navLinks.classList.toggle('open')
+  hamburger.addEventListener('click', (e) => {
+    e.stopPropagation()
+    setMobileNavOpen(!navLinks.classList.contains('open'))
   })
+
   navLinks.querySelectorAll('a').forEach(link => {
     // Don't close hamburger when clicking dropdown items (they're inside .nav-dropdown)
     if (link.closest('.nav-dropdown-menu')) return
-    link.addEventListener('click', () => {
-      hamburger.classList.remove('open')
-      navLinks.classList.remove('open')
-    })
+    link.addEventListener('click', () => setMobileNavOpen(false))
+  })
+
+  document.addEventListener('click', (e) => {
+    if (!navLinks.classList.contains('open')) return
+    if (e.target.closest('.nav-inner') || e.target === hamburger) return
+    setMobileNavOpen(false)
+  })
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && navLinks.classList.contains('open')) {
+      setMobileNavOpen(false)
+      hamburger.focus()
+    }
+  })
+
+  window.addEventListener('resize', () => {
+    if (window.innerWidth > 900 && navLinks.classList.contains('open')) {
+      setMobileNavOpen(false)
+    }
   })
 }
 

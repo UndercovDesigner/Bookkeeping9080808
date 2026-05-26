@@ -1262,6 +1262,57 @@ html.dark .ai-mockup {
   .onboard-grid {
     grid-template-columns: 1fr;
   }
+
+  .ba-title { font-size: 1.35rem; }
+  .how-head { margin-bottom: 40px; }
+  .how-step-title { font-size: 1.1rem; }
+  .ai-lede { font-size: 1rem; }
+  .ai-bullets li { padding: 14px; }
+  .ai-mockup-wrap { min-height: auto; }
+  .ai-mockup { max-width: 100%; transform: none; }
+  .ai-mockup:hover { transform: translateY(-4px); }
+  .onboard-head { margin-bottom: 40px; }
+  .onboard-sub { font-size: 0.95rem; }
+}
+
+/* ─── Mobile nav overlay + scroll lock ─── */
+body.nav-open {
+  overflow: hidden;
+  touch-action: none;
+}
+
+body.nav-open .nav::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  background: rgba(26, 22, 20, 0.42);
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
+  pointer-events: auto;
+}
+
+body.nav-open .nav-inner {
+  z-index: 1;
+}
+
+.dark body.nav-open .nav::before {
+  background: rgba(0, 0, 0, 0.55);
+}
+
+@media (max-width: 900px) {
+  .nav-links.open {
+    z-index: 5;
+    max-height: min(70vh, 520px);
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  html[dir="rtl"] .nav-links {
+    left: 50%;
+    right: auto;
+    transform: translateX(-50%);
+  }
 }
 
 /* ─────────────────────────── Language switcher ───────────────────────────
